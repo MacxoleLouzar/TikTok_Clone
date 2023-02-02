@@ -1,4 +1,5 @@
 import express from 'express'
+import cors from 'cors'
 import mongoose from 'mongoose'
 import Videos from './dbModel.js'
 
@@ -8,6 +9,9 @@ const port = 3003;
 
 //middleware
 app.use(express.json())
+app.use(cors({
+    origin: '*'
+}));
 
 //DB config
 
