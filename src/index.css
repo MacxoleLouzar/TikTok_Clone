@@ -14,3 +14,22 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.videofooter {
+  position: relative;
+  color: black !important;
+  bottom: 150px;
+  margin-left: 40px;
+  display: flex;
+}
+
+.videofooter_record {
+  height: 50px;
+
+  position: absolute;
+  bottom: 0;
+  right: 20px;
+  background-color: red !important;
+  border-radius: 50%;
+}

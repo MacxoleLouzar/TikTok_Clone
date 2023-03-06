@@ -6,7 +6,7 @@ import { MdFavoriteBorder } from 'react-icons/md'
 import { IoMdShareAlt } from 'react-icons/io'
 import { AiOutlineMessage } from 'react-icons/ai'
 
-function VideoSideBar() {
+function VideoSideBar({likes, shares, messages}) {
 const [liked, setLiked] = useState(false);
 
   return (
@@ -21,15 +21,15 @@ const [liked, setLiked] = useState(false);
                       onClick={(e)=>setLiked(true)} />
                 )
             }
-            <p>342</p>
+            <p>{liked ? likes + 1 : likes}</p>
         </div>
         <div className="videoSidebar_button">
             <AiOutlineMessage fontSize="large"/>
-            <p>198</p>
+            <p>{messages}</p>
         </div>
         <div className="videoSidebar_button">
             <IoMdShareAlt fontSize="large"/>
-            <p>32</p>
+            <p>{shares}</p>
         </div>
     </div>
   );
